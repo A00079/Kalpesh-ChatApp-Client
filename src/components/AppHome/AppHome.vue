@@ -122,24 +122,6 @@
         </div>
       </div>
     </section>
-    <!-- <div :style="styles.wrapper">
-      <div style="margin: auto">
-        <p :style="styles.title">Secure Chat App</p>
-        <p :style="styles.subtitle">Login with one of our sample users</p>
-
-        <p :style="styles.loginText">Login with UID</p>
-
-        <input
-          type="text"
-          v-model="uid"
-          :style="styles.input"
-          placeholder="Enter your UID here"
-          @keyup.enter="login($event, uid)"
-        />
-
-        <div :style="styles.loginButton" @click="login($event, uid)">Login</div>
-      </div>
-    </div> -->
     <loader v-if="showloader" />
   </div>
 </template>
@@ -252,7 +234,7 @@ export default {
       (user) => {
         console.log("user", user);
         if (user) {
-          location.href = "#/menu";
+          location.href = "#/user-screen";
           this.uid = user.getUid();
         } else {
           this.showloader = false;

@@ -7,7 +7,14 @@
         :style="styles.headerClose"
         @click="emitAction('closeMenuClicked')"
       ></div>
-      <h4 :style="styles.headerTitle">{{ STRINGS.USERS }}</h4>
+      <div class="w-full flex flex-row justify-between items-center">
+        <div>
+          <p :style="styles.headerTitle">{{ STRINGS.USERS }}</p>
+        </div>
+        <div>
+          <button @click="logout" class="bg-red-400 p-3 rounded-md text-sm font-bold text-white">Logout</button>
+        </div>
+      </div>
     </div>
     <div :style="styles.search">
       <input
@@ -45,6 +52,7 @@
 </template>
 
 <script>
+import { CometChat } from "@cometchat-pro/chat";
 import {
   COMETCHAT_CONSTANTS,
   DEFAULT_OBJECT_PROP,
@@ -192,6 +200,11 @@ export default {
     },
   },
   methods: {
+    logout() {
+      CometChat.logout().then(() => {
+        location.href = "/";
+      });
+    },
     /**
      * Handles user search
      */
