@@ -1,15 +1,15 @@
 <template>
   <div>
     <div :style="styles.wrapper">
-      <p :style="styles.title" class="kitchen-sink__title">
+      <!-- <p :style="styles.title" class="kitchen-sink__title">
         The UI Kit has different ways to make fully customizable UI required to
         build a chat application.
-      </p>
-      <p :style="styles.subTitle" class="kitchen-sink__subtitle">
+      </p> -->
+      <!-- <p :style="styles.subTitle" class="kitchen-sink__subtitle">
         The UI Kit has been developed to help developers of different levels of
         experience to build a chat application in a few minutes to a couple of
         hours.
-      </p>
+      </p> -->
 
       <div
         :key="i"
