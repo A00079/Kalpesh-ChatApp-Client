@@ -40,12 +40,13 @@
     </div>
     <div :style="styles.optionWrapper">
       <span
-        v-if="canShowAudioCall"
+        v-show="false"
         class="cometchat_chat_option"
         :style="styles.audioCallOption"
         @click="emitAction('audioCall')"
       ></span>
       <span
+        v-show="false"
         v-if="canShowVideoCall"
         class="cometchat_chat_option"
         :style="styles.videoCallOption"
