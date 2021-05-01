@@ -192,13 +192,13 @@ export default {
   },
   methods: {
     toggleScreen() {
-      this.isSignedUp = !this.isSignedUp
+      this.isSignedUp = !this.isSignedUp;
     },
     createNewUser() {
       this.showloader = true;
       // this.userUID = Math.random().toString(36).substr(2, 9);
       let newUser = { uid: this.userUID, name: this.userName };
-      let apiKey = "f93f0ea437e8bb81691498a46b8a8b1efc5dc01f";
+      let apiKey = COMETCHAT_CONSTANTS.AUTH_KEY;
       CometChat.createUser(newUser, apiKey).then((res) => {
         console.log("Created User", res);
         this.showloader = false;
